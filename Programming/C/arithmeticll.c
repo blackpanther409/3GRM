@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
+int c=0;
 struct node
 {
 	data;
@@ -9,9 +10,14 @@ struct node
 struct node *top1=NULL;
 struct node *top2=NULL;
 struct node *top3=NULL;
+void push(int x,struct node **top);
+int pop(struct node **top);
+void addition();
+void subtract();
 int main()
 {
 	char p;
+	B:
 	printf("Enter the first number\n");		
 	for(int i=0;p!='\n';i++)
 	{
@@ -24,8 +30,16 @@ int main()
 		scanf("%c",&top2);
 		push(p-48,&top2);	
 	}
-	printf("Select one option \n1.add\n2.subtract\n3.multiply\n4.divide\n");
-	addition();
+	A:
+	printf("Select one option \n1.add\n2.subtract\n3.multiply\n4.divide\n5.give another set of numbers\n");
+	switch(c)
+	{
+		case 1:addition();top3=NULL;goto A;break;
+		case 2:subtraction();top3=NULL;goto A;break;		
+		case 3:multiplcation();top3=NULL;goto A;break; 
+		case 4:division();top3=NULL;goto A;break;
+		case 5:goto B;break;
+	}
 return 0;
 }
 
@@ -46,21 +60,36 @@ int pop(struct node **top)
 	{
 		x=*top->data;		
 		*top=*top->next;
+		return x;
 	}
 
 }
 
 void addition()
 {
-	int a,b,c;
-	a=pop(&top1);
-	b=pop(&top2);
+	int a,b;
+	while(top1!=NULL || top2!=NULL) 
+	{	
+		a=pop(&top1);
+		b=pop(&top2);
+		push(((a+b)%10)&top3);
+		c=(a+b)/10;
+	}
 	
-
+	
 }
 
 void subtract()
 {
+
+
+
+
+}
+
+
+
+
 
 
 
