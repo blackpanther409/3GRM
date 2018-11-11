@@ -72,20 +72,20 @@ void addition()
 	{	
 		a=pop(&top1);
 		b=pop(&top2);
-		push(((a+b)%10)&top3);
+		push(((a+b)%10),&top3);
 		c=(a+b)/10;
 	}
 	
 	
 }
 
-void subtract()
-{
+//void subtract()
+//{
+	
 
 
 
-
-}
+//}
 
 
 
