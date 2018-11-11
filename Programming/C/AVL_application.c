@@ -8,7 +8,7 @@ struct Tnode
 	int height;
    struct Tnode *rcptr;
 }*rptr=NULL;
-struct Tnode* insert(struct Tnode *ptr,long int x;);
+struct Tnode* insert(struct Tnode *ptr,long int x);
 void updateheight(struct Tnode *ptr);
 int findheight(struct Tnode *ptr);
 struct Tnode* RotateRight(struct Tnode *ptr);
