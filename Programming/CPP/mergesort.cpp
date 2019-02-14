@@ -42,6 +42,7 @@ void Array::merge(int beg,int end)
 	int b[n];
 	for(int k=0;k<end-beg+1;k++)
 	{
+		cout<<i<<" "<<j<<" \n";
 		if(i<=mid && j<=end)
 		{
 			if(a[i]<a[j])
