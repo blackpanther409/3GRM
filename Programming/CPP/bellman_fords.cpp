@@ -14,7 +14,7 @@ class graph
 		void find();
 		void print();
 };
-
+//get takes an adjacency matrix,source node vertex as input 
 void graph::get()
 {
 	count=0;
@@ -35,7 +35,7 @@ void graph::get()
 		}
 	}
 }
-
+//find finds the minimum distance of that node from all the nodes
 void graph::find()
 {
 	flag=0;
@@ -69,7 +69,7 @@ void graph::find()
 		}
 	}
 }
-
+//print prints out the result(distances)
 void graph::print()
 {
 	cout<<"Minimum distances from source node\n";
@@ -84,7 +84,7 @@ int main()
 {
 	graph g;
 	g.get();
-	for(int i=1;i<=g.n;i++)
+	for(int i=1;i<=g.n;i++) //changes souce node vertex in each iteration
 	{
 		g.s=i;
 		g.find();
