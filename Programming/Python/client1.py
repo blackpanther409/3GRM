@@ -7,7 +7,7 @@ print(socket.gethostname())
 #buffering the message 
 full_msg=''
 while True:
-  msg = s.recv(8)                   #receiving 8 bytes at a time
+  msg = s.recv(8)                   #receiving 8 bytes at a time( can take any number of bytes, its optional)
   if len(msg)>0:
     full_msg +=msg.decode("utf-8")  #adding all the bytes
   else:
