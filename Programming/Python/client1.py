@@ -1,7 +1,7 @@
 import socket
 
 s= socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-s.connect((socket.gethostname(),80))
+s.connect((socket.gethostname(),1200))
 print(socket.gethostname())
 
 #buffering the message 
